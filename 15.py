@@ -16,10 +16,8 @@ def ler_arquivo_json(caminho_completo):
         print(f"Ocorreu um erro inesperado: {e}")
         return None
 
-# Obtendo o diretório do script atual
 diretorio_atual = os.path.dirname(__file__)
 
-# Combinando o diretório atual com o nome da pasta e do arquivo
 caminho_completo = os.path.join(diretorio_atual, "arquivos", "dados1.json")
 
 dados_json = ler_arquivo_json(caminho_completo)

@@ -19,14 +19,10 @@ def mes_com_menos_vendas(arquivo_csv):
 
     return mes_menos_vendas, total_vendas
 
-# Obtendo o diretório do script atual
 diretorio_atual = os.path.dirname(__file__)
 
-# Combinando o diretório atual com o nome da pasta e do arquivo CSV original
 arquivo_csv = os.path.join(diretorio_atual, "arquivos", "mes_vendas.csv")
 
-# Chamando a função para determinar o mês com menos vendas
 mes_menos_vendas, total_vendas = mes_com_menos_vendas(arquivo_csv)
 
-# Exibindo o resultado
 print(f"O mês com menos vendas foi {mes_menos_vendas} com um total de {total_vendas} vendas.")

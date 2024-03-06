@@ -10,7 +10,6 @@ def encontrar_menor_string(lista_de_strings):
             menor_string = string  
     return menor_string
 
-# Exemplo de uso:
 lista = ["banana", "maçã", "laranja", "uva", "abacaxi"]
 menor = encontrar_menor_string(lista)
 print("Menor string na lista:", menor)

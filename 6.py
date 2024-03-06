@@ -13,7 +13,6 @@ def soma_matrizes(matriz1, matriz2):
 
     return resultado
 
-# Exemplo de uso:
 matriz1 = [[1, 2, 3],
            [4, 5, 6],
            [7, 8, 9]]

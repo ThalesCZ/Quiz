@@ -16,10 +16,8 @@ def ler_arquivo_csv(caminho_completo):
         print("Ocorreu um erro ao ler o arquivo CSV:", e)
         return None
 
-# Obtendo o diretório do script atual
 diretorio_atual = os.path.dirname(__file__)
 
-# Combinando o diretório atual com o nome da pasta e do arquivo
 caminho_completo = os.path.join(diretorio_atual, "arquivos", "dados.csv")
 
 dados_csv = ler_arquivo_csv(caminho_completo)
