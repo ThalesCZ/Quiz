@@ -1,0 +1,26 @@
+import os
+import csv
+
+def soma_vendas_por_vendedor(arquivo_csv):
+    vendas_por_vendedor = {}
+
+    with open(arquivo_csv, newline='') as csvfile:
+        reader = csv.DictReader(csvfile)
+        for linha in reader:
+            vendedor = linha['Vendedor']
+            venda = float(linha['Venda'])
+            if vendedor in vendas_por_vendedor:
+                vendas_por_vendedor[vendedor] += venda
+            else:
+                vendas_por_vendedor[vendedor] = venda
+
+    return vendas_por_vendedor
+
+diretorio_atual = os.path.dirname(__file__)
+
+arquivo_csv = os.path.join(diretorio_atual, "arquivos", "vendas.csv")
+
+soma_vendas_vendedores = soma_vendas_por_vendedor(arquivo_csv)
+
+for vendedor, soma_vendas in soma_vendas_vendedores.items():
+    print(f"O vendedor {vendedor} teve um total de {soma_vendas} vendas.")
